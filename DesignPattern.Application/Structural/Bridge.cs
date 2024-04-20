@@ -65,11 +65,8 @@ public abstract class BaseAccountCreator
 #region Implementation
 
 // Refined abstraction
-public class AccountService : BaseAccountService
+public class AccountService(BaseAccountCreator implementor) : BaseAccountService(implementor)
 {
-    public AccountService(BaseAccountCreator implementor) : base(implementor)
-    {
-    }
 }
 
 

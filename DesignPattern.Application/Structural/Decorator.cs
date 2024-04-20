@@ -30,15 +30,10 @@ public class DanskeBankIndividualAccount : IndicidualAccount
 }
 
 // Abstract decorator
-public abstract class OrderableAccount : IndicidualAccount
+public abstract class OrderableAccount(IndicidualAccount account) : IndicidualAccount
 {
 
-    protected IndicidualAccount _account;
-
-    protected OrderableAccount(IndicidualAccount account)
-    {
-        _account = account;
-    }
+    protected IndicidualAccount _account = account;
 
     public abstract void Buy();
 }
@@ -48,12 +43,8 @@ public abstract class OrderableAccount : IndicidualAccount
 #region Implementation
 
 // Concrete decorator
-public class DanskeBankOrderableAccount : OrderableAccount
+public class DanskeBankOrderableAccount(IndicidualAccount account) : OrderableAccount(account)
 {
-    public DanskeBankOrderableAccount(IndicidualAccount account) : base(account)
-    {
-    }
-
     public override void Buy()
     {
         // TODO: business logic here...
