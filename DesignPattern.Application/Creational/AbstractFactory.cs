@@ -8,7 +8,7 @@ static class Program
     {
         var factory = new DanskeBankAccountFactory();
         var corporateAccount = factory.CreateCorporateAccount();
-        var individualAccount = factory.CreateIndicidualAccount();
+        var individualAccount = factory.CreateIndividualAccount();
     }
 }
 
@@ -18,14 +18,14 @@ static class Program
 public abstract class BaseAccountFactory
 {
     public abstract CorporateAccount CreateCorporateAccount();
-    public abstract IndicidualAccount CreateIndicidualAccount();
+    public abstract IndividualAccount CreateIndividualAccount();
 }
 
 public abstract class CorporateAccount
 {
 }
 
-public abstract class IndicidualAccount
+public abstract class IndividualAccount
 {
 }
 
@@ -38,7 +38,7 @@ public class DanskeBankCorporateAccount : CorporateAccount
 
 }
 
-public class DanskeBankIndividualAccount : IndicidualAccount
+public class DanskeBankIndividualAccount : IndividualAccount
 {
 
 }
@@ -50,7 +50,7 @@ public class DanskeBankAccountFactory : BaseAccountFactory
         return new DanskeBankCorporateAccount();
     }
 
-    public override IndicidualAccount CreateIndicidualAccount()
+    public override IndividualAccount CreateIndividualAccount()
     {
         return new DanskeBankIndividualAccount();
     }
