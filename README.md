@@ -5,8 +5,11 @@
 The Strategy Design Pattern allows defining a family of algorithms, encapsulating each one, and making them interchangeable.
 This pattern enables selecting an algorithm's behavior at runtime without altering the objects that use it.
 It's particularly useful when different behaviors are needed in different situations, allowing for flexible and reusable code.
-The pattern involves three key components: Context, which uses a strategy; Strategy,
-which defines a common interface for algorithms; and Concrete Strategies, which implement specific algorithms.
+
+The pattern involves three key components: 
+- Context, which uses a strategy;
+- Strategy, which defines a common interface for algorithms;
+- Concrete Strategies, which implement specific algorithms.
 
 ```c#
 // Strategy interface
@@ -71,10 +74,10 @@ The Decorator Design Pattern allows behavior to be added to individual objects, 
 
 It involves:
 
-Component: Defines the common interface for objects that can have responsibilities added dynamically.
-ConcreteComponent: The basic object that can have additional responsibilities.
-Decorator: Wraps the component and adds extra behavior.
-ConcreteDecorator: Adds specific behavior to the component.
+- Component: Defines the common interface for objects that can have responsibilities added dynamically.
+- ConcreteComponent: The basic object that can have additional responsibilities.
+- Decorator: Wraps the component and adds extra behavior.
+- ConcreteDecorator: Adds specific behavior to the component.
 
 ```c#
 // Component interface
@@ -150,10 +153,10 @@ The Observer Design Pattern defines a one-to-many relationship between objects, 
 
 It involves:
 
-Subject: Maintains a list of observers and notifies them of any state changes.
-Observer: Defines an interface for receiving updates.
-ConcreteSubject: Implements the subject and sends notifications to observers.
-ConcreteObserver: Implements the observer and updates its state when notified by the subject.
+- Subject: Maintains a list of observers and notifies them of any state changes.
+- Observer: Defines an interface for receiving updates.
+- ConcreteSubject: Implements the subject and sends notifications to observers.
+- ConcreteObserver: Implements the observer and updates its state when notified by the subject.
 
 ```c#
 // Observer interface
@@ -245,9 +248,9 @@ The Singleton Design Pattern ensures that a class has only one instance and prov
 
 Key points of a Singleton:
 
-A private constructor prevents other classes from instantiating it.
-A static method provides access to the single instance.
-The instance is typically created lazily, meaning it's created only when needed.
+- A private constructor prevents other classes from instantiating it.
+- A static method provides access to the single instance.
+- The instance is typically created lazily, meaning it's created only when needed.
 
 ```c#
 public class Singleton
@@ -307,8 +310,8 @@ class Program
 The Facade Design Pattern provides a simplified interface to a complex system of classes, libraries, or frameworks. It helps hide the complexity of subsystems by offering a higher-level interface. The pattern is useful when dealing with large systems, making them easier to use and understand by offering a single entry point for different functionalities.
 
 Key Points:
-Facade: Simplifies the interface and delegates tasks to the relevant subsystems.
-Subsystems: Perform the actual work and are hidden from the client.
+- Facade: Simplifies the interface and delegates tasks to the relevant subsystems.
+- Subsystems: Perform the actual work and are hidden from the client.
 
 ```c#
 // Subsystem 1
